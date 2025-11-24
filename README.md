@@ -102,8 +102,9 @@ Enable & reload:
 - Consider HTTPS on Lb01 (Let’s Encrypt).
 - Keep Web01/Web02 private and only expose Lb01 publicly if possible.
 
-## Credits
-- RxNorm and Geoapify for foundational data.
+## Live Demo 
+Visit the live site
+https://mdavi.tech
 
 ## Youtube Link
 https://youtu.be/wcbM4Of0QYE  
