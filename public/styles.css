@@ -1,0 +1,40 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22d3ee;
+  --error: #ef4444;
+  --success: #10b981;
+  --warn: #f59e0b;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Helvetica, Arial; background: var(--bg); color: var(--text); }
+
+.app-header { padding: 24px 16px; background: linear-gradient(135deg, #0ea5e9, #22d3ee); color: #0b1220; }
+.app-header h1 { margin: 0 0 4px; }
+.subtitle { margin: 0; opacity: 0.85; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 24px 16px; }
+.controls { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; align-items: end; margin-bottom: 16px; }
+.control-group label { display: block; margin-bottom: 6px; color: var(--muted); }
+.control-group input, .control-group select { width: 100%; padding: 10px 12px; border-radius: 8px; border: 1px solid #334155; background: var(--panel); color: var(--text); }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.primary { padding: 10px 14px; border: none; border-radius: 8px; background: var(--accent); color: #0b1220; cursor: pointer; font-weight: 600; }
+.primary:hover { filter: brightness(1.05); }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.card { border-radius: 10px; overflow: hidden; background: #0b1220; border: 1px solid #1f2937; padding: 12px; }
+.title { margin: 0 0 8px; font-size: 16px; }
+.meta { font-size: 13px; color: var(--muted); margin: 8px 0; }
+.badge { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; margin-right: 6px; }
+.badge.price { background: #1e293b; color: var(--text); }
+.badge.stock.in { background: #052e27; color: var(--success); border: 1px solid var(--success); }
+.badge.stock.low { background: #2b1d06; color: var(--warn); border: 1px solid var(--warn); }
+.badge.stock.out { background: #230c0c; color: var(--error); border: 1px solid var(--error); }
+
+.error { margin: 8px 0 16px; padding: 12px; border-radius: 8px; background: #1c1917; color: var(--error); border: 1px solid var(--error); }
+.hidden { display: none; }
+.loading { margin: 12px 0; }
+.footer { text-align: center; padding: 24px 16px; color: var(--muted); }

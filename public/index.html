@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Medication Availability & Price Checker</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Medication Availability & Price Checker</h1>
+      <p class="subtitle">Search meds, compare prices, find nearby pharmacies</p>
+    </header>
+
+    <main class="container">
+      <section class="controls">
+        <div class="control-group">
+          <label for="medInput">Medicine</label>
+          <input id="medInput" type="text" placeholder="e.g., Amoxicillin" />
+        </div>
+        <div class="control-group">
+          <label for="locInput">Location</label>
+          <input id="locInput" type="text" placeholder="City, State or ZIP" />
+        </div>
+        <div class="control-group">
+          <label for="radiusInput">Search radius (km)</label>
+          <input id="radiusInput" type="number" min="1" max="50" value="10" />
+        </div>
+        <div class="control-group">
+          <label for="sortSelect">Sort</label>
+          <select id="sortSelect">
+            <option value="distance">Nearest</option>
+            <option value="price_asc">Lowest Price</option>
+            <option value="price_desc">Highest Price</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label>Price range</label>
+          <div class="row">
+            <input id="priceMin" type="number" placeholder="Min $" min="0" step="0.01" />
+            <input id="priceMax" type="number" placeholder="Max $" min="0" step="0.01" />
+          </div>
+        </div>
+        <div class="control-group">
+          <label for="stockSelect">Stock</label>
+          <select id="stockSelect">
+            <option value="any">Any</option>
+            <option value="in_stock">In Stock</option>
+            <option value="low_stock">Low Stock</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <button id="searchBtn" class="primary">Search</button>
+        </div>
+      </section>
+
+      <section id="errorBar" class="error hidden"></section>
+      <section id="loading" class="loading hidden">Loading…</section>
+
+      <section id="meta" class="meta hidden"></section>
+      <section id="results" class="grid"></section>
+    </main>
+
+    <footer class="footer">
+      <small>Drug data via RxNorm; pharmacy locations via Geoapify. Prices are estimated for demo purposes. Keys are stored in environment variables only.</small>
+    </footer>
+
+    <script src="/app.js"></script>
+  </body>
+  </html>
